@@ -322,9 +322,9 @@ function HowItWorks() {
       <div className="mx-auto max-w-7xl px-5">
         <div className="text-center max-w-2xl mx-auto">
           <SectionLabel>HOW IT WORKS</SectionLabel>
-          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-cream">
+          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-hero-gradient">
             Three steps. One leaderboard.{" "}
-            <span className="text-gold-gradient">Real competition.</span>
+            <span className="text-cream">Real competition.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
             Start inside Telegram, build your points every day, and compete with the Meowlet community.
@@ -401,9 +401,9 @@ function Rewards() {
         <div className="grid lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-6">
             <SectionLabel>COMMUNITY REWARDS</SectionLabel>
-            <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-cream">
+            <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-hero-gradient">
               Every action moves you{" "}
-              <span className="text-gold-gradient">closer to the top.</span>
+              <span className="text-cream">closer to the top.</span>
             </h2>
           </div>
           <p className="lg:col-span-6 text-muted-foreground">
@@ -498,9 +498,9 @@ function Why() {
       <div className="mx-auto max-w-7xl px-5">
         <div className="text-center max-w-2xl mx-auto">
           <SectionLabel>WHY MEOWLET</SectionLabel>
-          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-cream">
+          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-hero-gradient">
             Built for the community that{" "}
-            <span className="text-gold-gradient">keeps showing up.</span>
+            <span className="text-cream">keeps showing up.</span>
           </h2>
         </div>
 
