@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/meowlet-hero.png";
+import heroImg from "@/assets/meowlet-hero-v2.png";
 import vaultImg from "@/assets/airdrop-vault.jpg";
 import miniImg from "@/assets/meowlet-mini.png";
 import { useEffect, useState } from "react";
