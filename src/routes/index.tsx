@@ -207,7 +207,7 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex w-fit items-center gap-4 rounded-2xl border border-[oklch(0.85_0.13_80/0.14)] bg-[oklch(0.13_0.03_280/0.42)] px-4 py-3 backdrop-blur-xl">
-            <img src={magicKittiesLogoAsset.url} alt="Magic Kitties Club" className="h-10 w-10 object-contain" loading="lazy" />
+            <img src={magicKittiesLogoAsset} alt="Magic Kitties Club" className="h-10 w-10 object-contain" loading="lazy" />
             <div>
               <div className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Powered by</div>
               <div className="text-sm font-semibold text-cream">Magic Kitties Club ecosystem</div>
@@ -222,7 +222,7 @@ function Hero() {
             <div className="absolute inset-x-[22%] top-[22%] h-[38%] rounded-full border border-[oklch(0.82_0.16_75/0.08)]" />
 
             <img
-              src={heroCatAsset.url}
+              src={heroCatAsset}
               alt="Meowlet mascot"
               width={1024}
               height={1024}
