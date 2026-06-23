@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Meowlet" },
+      { name: "description", content: "Meowlet is a Telegram Mini App for earning rewards and building community." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Meowlet" },
+      { property: "og:description", content: "Meowlet is a Telegram Mini App for earning rewards and building community." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Meowlet" },
+      { name: "twitter:description", content: "Meowlet is a Telegram Mini App for earning rewards and building community." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0abc0271-f5c3-47d6-a707-fe8544647e9f/id-preview-b042050c--7ee0be35-4d89-407a-9c30-5e78a4e2f51a.lovable.app-1782241975254.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0abc0271-f5c3-47d6-a707-fe8544647e9f/id-preview-b042050c--7ee0be35-4d89-407a-9c30-5e78a4e2f51a.lovable.app-1782241975254.png" },
     ],
     links: [
       {
