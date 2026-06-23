@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/meowlet-hero-v2.png";
+import heroCatAsset from "@/assets/meowlet-hero-cat.png.asset.json";
+import meowletLogoAsset from "@/assets/meowlet-logo-main.png.asset.json";
+import magicKittiesLogoAsset from "@/assets/magic-kitties-logo.png.asset.json";
 import vaultImg from "@/assets/airdrop-vault.jpg";
 import miniImg from "@/assets/meowlet-mini.png";
 import { useEffect, useState } from "react";
@@ -43,13 +45,8 @@ const NAV = [
 
 function Logo() {
   return (
-    <a href="#home" className="flex items-center gap-2 group">
-      <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gold-gradient shadow-glow">
-        <PawIcon className="h-5 w-5 text-[oklch(0.15_0.03_60)]" />
-      </span>
-      <span className="font-display text-xl font-bold tracking-tight text-cream">
-        Meow<span className="text-gold-gradient">let</span>
-      </span>
+    <a href="#home" className="flex items-center gap-3 group">
+      <img src={meowletLogoAsset.url} alt="Meowlet" className="h-11 w-auto object-contain" loading="eager" />
     </a>
   );
 }
