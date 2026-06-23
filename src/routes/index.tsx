@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/meowlet-hero.png";
+import heroImg from "@/assets/meowlet-hero-v2.png";
 import vaultImg from "@/assets/airdrop-vault.jpg";
 import miniImg from "@/assets/meowlet-mini.png";
 import { useEffect, useState } from "react";
@@ -74,11 +74,11 @@ function Button({
   ...rest
 }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { variant?: "primary" | "ghost" }) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300";
+    "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-300";
   const styles =
     variant === "primary"
-      ? "bg-gold-gradient text-[oklch(0.15_0.03_60)] shadow-glow hover:scale-[1.03] hover:shadow-[0_0_80px_-10px_oklch(0.82_0.16_75/0.8)]"
-      : "border border-[oklch(0.85_0.13_80/0.3)] text-cream hover:border-[oklch(0.85_0.13_80/0.6)] hover:bg-[oklch(0.85_0.13_80/0.05)]";
+      ? "bg-btn-gradient text-white shadow-[0_8px_32px_-8px_oklch(0.65_0.27_350/0.7)] hover:scale-[1.04] hover:shadow-[0_12px_40px_-6px_oklch(0.68_0.3_350/0.8)] hover:brightness-110"
+      : "border border-[oklch(0.85_0.13_80/0.25)] text-cream backdrop-blur-sm hover:border-[oklch(0.85_0.13_80/0.55)] hover:bg-[oklch(0.85_0.13_80/0.08)]";
   return (
     <a href={href} className={`${base} ${styles} ${className}`} {...rest}>
       {children}
@@ -185,9 +185,9 @@ function Hero() {
               OFFICIAL TELEGRAM MINI APP · MAGIC KITTIES CLUB
             </span>
           </div>
-          <h1 className="mt-6 text-[44px] leading-[1.02] sm:text-6xl lg:text-7xl font-bold text-cream">
+          <h1 className="mt-6 text-[44px] leading-[1.02] sm:text-6xl lg:text-7xl font-bold text-hero-gradient">
             This Is Not Just a Game.{" "}
-            <span className="text-gold-gradient">It's an Elite Experience.</span>
+            <span className="text-cream">It's an Elite Experience.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
             Tap, earn, and compete with a community that shows up every single day.
@@ -322,9 +322,9 @@ function HowItWorks() {
       <div className="mx-auto max-w-7xl px-5">
         <div className="text-center max-w-2xl mx-auto">
           <SectionLabel>HOW IT WORKS</SectionLabel>
-          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-cream">
+          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-hero-gradient">
             Three steps. One leaderboard.{" "}
-            <span className="text-gold-gradient">Real competition.</span>
+            <span className="text-cream">Real competition.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
             Start inside Telegram, build your points every day, and compete with the Meowlet community.
@@ -401,9 +401,9 @@ function Rewards() {
         <div className="grid lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-6">
             <SectionLabel>COMMUNITY REWARDS</SectionLabel>
-            <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-cream">
+            <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-hero-gradient">
               Every action moves you{" "}
-              <span className="text-gold-gradient">closer to the top.</span>
+              <span className="text-cream">closer to the top.</span>
             </h2>
           </div>
           <p className="lg:col-span-6 text-muted-foreground">
@@ -498,9 +498,9 @@ function Why() {
       <div className="mx-auto max-w-7xl px-5">
         <div className="text-center max-w-2xl mx-auto">
           <SectionLabel>WHY MEOWLET</SectionLabel>
-          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-cream">
+          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-hero-gradient">
             Built for the community that{" "}
-            <span className="text-gold-gradient">keeps showing up.</span>
+            <span className="text-cream">keeps showing up.</span>
           </h2>
         </div>
 
@@ -676,37 +676,39 @@ function Index() {
 function WaveDecor() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <svg className="absolute -top-10 left-0 w-[140%] opacity-40" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg className="absolute -top-10 -left-[10%] w-[140%] opacity-70" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <defs>
           <linearGradient id="w1" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="oklch(0.78 0.15 220)" />
-            <stop offset="0.5" stopColor="oklch(0.55 0.25 300)" />
-            <stop offset="1" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="0" stopColor="oklch(0.7 0.25 350)" />
+            <stop offset="0.4" stopColor="oklch(0.6 0.28 300)" />
+            <stop offset="0.7" stopColor="oklch(0.75 0.18 25)" />
+            <stop offset="1" stopColor="oklch(0.68 0.3 350)" />
           </linearGradient>
         </defs>
-        <path fill="url(#w1)" fillOpacity="0.35" d="M0,160 C240,260 480,60 720,140 C960,220 1200,80 1440,160 L1440,320 L0,320 Z" />
+        <path fill="url(#w1)" fillOpacity="0.45" d="M0,120 C240,220 480,40 720,120 C960,200 1200,60 1440,140 L1440,320 L0,320 Z" />
       </svg>
-      <svg className="absolute top-[55%] -left-10 w-[140%] opacity-50" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg className="absolute top-[40%] -left-[10%] w-[140%] opacity-60" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <defs>
           <linearGradient id="w2" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="oklch(0.65 0.27 350)" />
-            <stop offset="0.5" stopColor="oklch(0.78 0.22 40)" />
-            <stop offset="1" stopColor="oklch(0.55 0.25 300)" />
+            <stop offset="0" stopColor="oklch(0.78 0.15 220)" />
+            <stop offset="0.5" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="1" stopColor="oklch(0.75 0.22 40)" />
           </linearGradient>
         </defs>
-        <path fill="url(#w2)" fillOpacity="0.3" d="M0,200 C360,80 720,260 1080,160 C1260,110 1380,180 1440,200 L1440,320 L0,320 Z" />
+        <path fill="url(#w2)" fillOpacity="0.4" d="M0,220 C360,80 720,280 1080,170 C1260,120 1380,190 1440,210 L1440,320 L0,320 Z" />
       </svg>
-      <svg className="absolute bottom-[-40px] left-0 w-[140%] opacity-50" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg className="absolute bottom-[-60px] -left-[10%] w-[140%] opacity-70" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <defs>
           <linearGradient id="w3" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="oklch(0.78 0.22 40)" />
-            <stop offset="1" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="0" stopColor="oklch(0.75 0.22 40)" />
+            <stop offset="0.5" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="1" stopColor="oklch(0.6 0.28 300)" />
           </linearGradient>
         </defs>
-        <path fill="url(#w3)" fillOpacity="0.35" d="M0,180 C300,300 600,60 960,160 C1200,230 1320,140 1440,180 L1440,320 L0,320 Z" />
+        <path fill="url(#w3)" fillOpacity="0.5" d="M0,160 C300,280 600,50 960,150 C1200,240 1320,120 1440,170 L1440,320 L0,320 Z" />
       </svg>
       {/* stars */}
-      <div className="absolute inset-0 bg-[radial-gradient(oklch(1_0_0/0.4)_1px,transparent_1px)] [background-size:120px_120px] opacity-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(oklch(1_0_0/0.5)_1px,transparent_1px)] [background-size:100px_100px] opacity-25" />
     </div>
   );
 }
