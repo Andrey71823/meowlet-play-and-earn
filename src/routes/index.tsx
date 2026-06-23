@@ -74,11 +74,11 @@ function Button({
   ...rest
 }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { variant?: "primary" | "ghost" }) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300";
+    "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-300";
   const styles =
     variant === "primary"
-      ? "bg-gold-gradient text-[oklch(0.15_0.03_60)] shadow-glow hover:scale-[1.03] hover:shadow-[0_0_80px_-10px_oklch(0.82_0.16_75/0.8)]"
-      : "border border-[oklch(0.85_0.13_80/0.3)] text-cream hover:border-[oklch(0.85_0.13_80/0.6)] hover:bg-[oklch(0.85_0.13_80/0.05)]";
+      ? "bg-btn-gradient text-white shadow-[0_8px_32px_-8px_oklch(0.65_0.27_350/0.7)] hover:scale-[1.04] hover:shadow-[0_12px_40px_-6px_oklch(0.68_0.3_350/0.8)] hover:brightness-110"
+      : "border border-[oklch(0.85_0.13_80/0.25)] text-cream backdrop-blur-sm hover:border-[oklch(0.85_0.13_80/0.55)] hover:bg-[oklch(0.85_0.13_80/0.08)]";
   return (
     <a href={href} className={`${base} ${styles} ${className}`} {...rest}>
       {children}
