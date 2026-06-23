@@ -185,9 +185,9 @@ function Hero() {
               OFFICIAL TELEGRAM MINI APP · MAGIC KITTIES CLUB
             </span>
           </div>
-          <h1 className="mt-6 text-[44px] leading-[1.02] sm:text-6xl lg:text-7xl font-bold text-cream">
+          <h1 className="mt-6 text-[44px] leading-[1.02] sm:text-6xl lg:text-7xl font-bold text-hero-gradient">
             This Is Not Just a Game.{" "}
-            <span className="text-gold-gradient">It's an Elite Experience.</span>
+            <span className="text-cream">It's an Elite Experience.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
             Tap, earn, and compete with a community that shows up every single day.
@@ -676,37 +676,39 @@ function Index() {
 function WaveDecor() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <svg className="absolute -top-10 left-0 w-[140%] opacity-40" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg className="absolute -top-10 -left-[10%] w-[140%] opacity-70" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <defs>
           <linearGradient id="w1" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="oklch(0.78 0.15 220)" />
-            <stop offset="0.5" stopColor="oklch(0.55 0.25 300)" />
-            <stop offset="1" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="0" stopColor="oklch(0.7 0.25 350)" />
+            <stop offset="0.4" stopColor="oklch(0.6 0.28 300)" />
+            <stop offset="0.7" stopColor="oklch(0.75 0.18 25)" />
+            <stop offset="1" stopColor="oklch(0.68 0.3 350)" />
           </linearGradient>
         </defs>
-        <path fill="url(#w1)" fillOpacity="0.35" d="M0,160 C240,260 480,60 720,140 C960,220 1200,80 1440,160 L1440,320 L0,320 Z" />
+        <path fill="url(#w1)" fillOpacity="0.45" d="M0,120 C240,220 480,40 720,120 C960,200 1200,60 1440,140 L1440,320 L0,320 Z" />
       </svg>
-      <svg className="absolute top-[55%] -left-10 w-[140%] opacity-50" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg className="absolute top-[40%] -left-[10%] w-[140%] opacity-60" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <defs>
           <linearGradient id="w2" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="oklch(0.65 0.27 350)" />
-            <stop offset="0.5" stopColor="oklch(0.78 0.22 40)" />
-            <stop offset="1" stopColor="oklch(0.55 0.25 300)" />
+            <stop offset="0" stopColor="oklch(0.78 0.15 220)" />
+            <stop offset="0.5" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="1" stopColor="oklch(0.75 0.22 40)" />
           </linearGradient>
         </defs>
-        <path fill="url(#w2)" fillOpacity="0.3" d="M0,200 C360,80 720,260 1080,160 C1260,110 1380,180 1440,200 L1440,320 L0,320 Z" />
+        <path fill="url(#w2)" fillOpacity="0.4" d="M0,220 C360,80 720,280 1080,170 C1260,120 1380,190 1440,210 L1440,320 L0,320 Z" />
       </svg>
-      <svg className="absolute bottom-[-40px] left-0 w-[140%] opacity-50" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg className="absolute bottom-[-60px] -left-[10%] w-[140%] opacity-70" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <defs>
           <linearGradient id="w3" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="oklch(0.78 0.22 40)" />
-            <stop offset="1" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="0" stopColor="oklch(0.75 0.22 40)" />
+            <stop offset="0.5" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="1" stopColor="oklch(0.6 0.28 300)" />
           </linearGradient>
         </defs>
-        <path fill="url(#w3)" fillOpacity="0.35" d="M0,180 C300,300 600,60 960,160 C1200,230 1320,140 1440,180 L1440,320 L0,320 Z" />
+        <path fill="url(#w3)" fillOpacity="0.5" d="M0,160 C300,280 600,50 960,150 C1200,240 1320,120 1440,170 L1440,320 L0,320 Z" />
       </svg>
       {/* stars */}
-      <div className="absolute inset-0 bg-[radial-gradient(oklch(1_0_0/0.4)_1px,transparent_1px)] [background-size:120px_120px] opacity-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(oklch(1_0_0/0.5)_1px,transparent_1px)] [background-size:100px_100px] opacity-25" />
     </div>
   );
 }
