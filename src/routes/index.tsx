@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/meowlet-hero-v2.png";
+import heroCatAsset from "@/assets/meowlet-hero-cat.png";
+import meowletLogoAsset from "@/assets/meowlet-logo-main.png";
+import magicKittiesLogoAsset from "@/assets/magic-kitties-logo.png";
 import vaultImg from "@/assets/airdrop-vault.jpg";
 import miniImg from "@/assets/meowlet-mini.png";
 import { useEffect, useState } from "react";
@@ -43,13 +45,8 @@ const NAV = [
 
 function Logo() {
   return (
-    <a href="#home" className="flex items-center gap-2 group">
-      <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gold-gradient shadow-glow">
-        <PawIcon className="h-5 w-5 text-[oklch(0.15_0.03_60)]" />
-      </span>
-      <span className="font-display text-xl font-bold tracking-tight text-cream">
-        Meow<span className="text-gold-gradient">let</span>
-      </span>
+    <a href="#home" className="flex items-center gap-3 group">
+      <img src={meowletLogoAsset} alt="Meowlet" className="h-11 w-auto object-contain" loading="eager" />
     </a>
   );
 }
@@ -169,27 +166,29 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-32 lg:pt-40 pb-20">
-      {/* ambient lights */}
+    <section id="home" className="hero-shell relative overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-18">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 right-[10%] h-[520px] w-[520px] rounded-full bg-[oklch(0.45_0.2_295/0.35)] blur-[120px]" />
-        <div className="absolute top-1/3 -left-32 h-[420px] w-[420px] rounded-full bg-[oklch(0.7_0.19_50/0.25)] blur-[120px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(oklch(1_0_0/0.06)_1px,transparent_1px)] [background-size:32px_32px] opacity-30" />
+        <div className="hero-ribbon hero-ribbon-top" />
+        <div className="hero-ribbon hero-ribbon-mid" />
+        <div className="hero-ribbon hero-ribbon-bottom" />
+        <div className="hero-stars absolute inset-0 opacity-55" />
+        <div className="absolute -top-32 right-[10%] h-[520px] w-[520px] rounded-full bg-[oklch(0.45_0.2_295/0.28)] blur-[120px]" />
+        <div className="absolute top-1/3 -left-32 h-[420px] w-[420px] rounded-full bg-[oklch(0.7_0.19_50/0.12)] blur-[120px]" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-5 grid lg:grid-cols-12 gap-10 items-center">
-        <div className="lg:col-span-6 relative z-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[oklch(0.85_0.13_80/0.25)] bg-[oklch(0.17_0.025_65/0.6)] px-4 py-1.5 backdrop-blur">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-12">
+        <div className="relative z-10 lg:col-span-6 lg:pr-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[oklch(0.85_0.13_80/0.18)] bg-[oklch(0.12_0.03_280/0.52)] px-4 py-1.5 backdrop-blur-xl">
             <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-glow" />
             <span className="text-[11px] font-semibold tracking-[0.18em] text-cream/90">
               OFFICIAL TELEGRAM MINI APP · MAGIC KITTIES CLUB
             </span>
           </div>
-          <h1 className="mt-6 text-[44px] leading-[1.02] sm:text-6xl lg:text-7xl font-bold text-hero-gradient">
+          <h1 className="mt-6 max-w-[11ch] text-[46px] leading-[0.97] sm:text-6xl lg:text-[6.2rem] font-bold text-hero-gradient">
             This Is Not Just a Game.{" "}
             <span className="text-cream">It's an Elite Experience.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+          <p className="mt-6 max-w-[34rem] text-lg leading-8 text-muted-foreground">
             Tap, earn, and compete with a community that shows up every single day.
             Real USDT rewards. Monthly leaderboards. And something massive on the horizon.
           </p>
@@ -206,25 +205,32 @@ function Hero() {
             <span className="text-cream">Tap.</span> Complete tasks.{" "}
             <span className="text-cream">Invite friends.</span> Climb the leaderboard.
           </p>
+
+          <div className="mt-8 flex w-fit items-center gap-4 rounded-2xl border border-[oklch(0.85_0.13_80/0.14)] bg-[oklch(0.13_0.03_280/0.42)] px-4 py-3 backdrop-blur-xl">
+            <img src={magicKittiesLogoAsset} alt="Magic Kitties Club" className="h-10 w-10 object-contain" loading="lazy" />
+            <div>
+              <div className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Powered by</div>
+              <div className="text-sm font-semibold text-cream">Magic Kitties Club ecosystem</div>
+            </div>
+          </div>
         </div>
 
-        <div className="lg:col-span-6 relative">
-          <div className="relative aspect-square max-w-[600px] mx-auto">
-            {/* halo */}
-            <div className="absolute inset-[8%] rounded-full bg-[radial-gradient(circle_at_center,oklch(0.82_0.16_75/0.35),transparent_60%)] blur-2xl animate-pulse-glow" />
-            <div className="absolute inset-[18%] rounded-full border border-[oklch(0.82_0.16_75/0.25)] animate-spin-slow" />
-            <div className="absolute inset-[6%] rounded-full border border-[oklch(0.82_0.16_75/0.1)]" />
+        <div className="relative lg:col-span-6">
+          <div className="relative mx-auto min-h-[420px] max-w-[640px] lg:min-h-[560px]">
+            <div className="absolute inset-x-[12%] top-[10%] h-[58%] rounded-full bg-[radial-gradient(circle_at_center,oklch(0.82_0.16_75/0.16),transparent_62%)] blur-[58px] animate-pulse-glow" />
+            <div className="absolute inset-x-[16%] top-[14%] h-[52%] rounded-full border border-[oklch(0.82_0.16_75/0.14)]" />
+            <div className="absolute inset-x-[22%] top-[22%] h-[38%] rounded-full border border-[oklch(0.82_0.16_75/0.08)]" />
 
             <img
-              src={heroImg}
-              alt="Meowlet character with golden coins"
+              src={heroCatAsset}
+              alt="Meowlet mascot"
               width={1024}
               height={1024}
-              className="relative z-10 h-full w-full object-contain animate-float drop-shadow-[0_30px_60px_oklch(0.82_0.16_75/0.35)]"
+              className="relative z-10 mx-auto h-[360px] w-auto object-contain pt-6 sm:h-[430px] lg:h-[520px] animate-float drop-shadow-[0_30px_90px_oklch(0.64_0.26_300/0.38)]"
+              loading="eager"
             />
 
-            {/* floating card: USDT rewards */}
-            <div className="absolute left-0 bottom-10 z-20 surface-card rounded-2xl p-3 pr-4 flex items-center gap-3 shadow-card animate-float-slow">
+            <div className="absolute left-0 bottom-[12%] z-20 flex max-w-[220px] items-center gap-3 rounded-2xl surface-card p-3 pr-4 shadow-card animate-float-slow">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-gold-gradient text-[oklch(0.15_0.03_60)] font-bold text-sm">
                 $
               </div>
@@ -234,8 +240,7 @@ function Hero() {
               </div>
             </div>
 
-            {/* floating card: leaderboard */}
-            <div className="absolute right-0 top-10 z-20 surface-card rounded-2xl p-3 w-[180px] shadow-card animate-float">
+            <div className="absolute right-0 top-[10%] z-20 w-[180px] rounded-2xl surface-card p-3 shadow-card animate-float">
               <div className="text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Leaderboard</div>
               {[
                 { r: 1, n: "CatKing", v: "248k" },
@@ -254,8 +259,7 @@ function Hero() {
               ))}
             </div>
 
-            {/* points counter */}
-            <div className="absolute right-6 bottom-0 z-20 surface-card rounded-full px-4 py-2 flex items-center gap-2 shadow-card animate-float-slow">
+            <div className="absolute right-8 bottom-[6%] z-20 flex items-center gap-2 rounded-full surface-card px-4 py-2 shadow-card animate-float-slow">
               <span className="h-2 w-2 rounded-full bg-gold animate-pulse-glow" style={{ background: "var(--gold)" }} />
               <span className="text-xs text-muted-foreground">Points</span>
               <span className="text-cream font-bold tabular-nums">+1,248</span>
@@ -269,18 +273,18 @@ function Hero() {
 
 function Stats() {
   const items = [
-    { v: "[Placeholder]", l: "Total Players" },
-    { v: "[Placeholder]", l: "Active Users" },
-    { v: "[Placeholder]", l: "Monthly Rewards" },
-    { v: "Monthly", l: "Leaderboard Resets" },
+    { v: "Daily Tasks", l: "Points sources" },
+    { v: "Friend Invites", l: "Community growth" },
+    { v: "USDT Rewards", l: "Prize focus" },
+    { v: "Monthly Cycles", l: "Leaderboard resets" },
   ];
   return (
-    <section className="relative mx-auto max-w-7xl px-5 pb-20">
-      <div className="surface-card rounded-3xl p-6 sm:p-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 divide-y lg:divide-y-0 lg:divide-x divide-[oklch(0.85_0.13_80/0.12)]">
+    <section className="relative mx-auto max-w-7xl px-5 pb-20 lg:-mt-4">
+      <div className="surface-card rounded-[2rem] px-6 py-6 sm:px-8 sm:py-8 lg:px-10">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-4 lg:divide-x divide-[oklch(0.85_0.13_80/0.12)]">
           {items.map((s, i) => (
-            <div key={i} className="px-2 lg:px-6 pt-4 lg:pt-0">
-              <div className="text-3xl sm:text-4xl font-bold font-display text-gold-gradient">{s.v}</div>
+            <div key={i} className="min-w-0 px-1 lg:px-6">
+              <div className="break-words text-[1.6rem] leading-none sm:text-[2.2rem] font-bold font-display text-hero-gradient">{s.v}</div>
               <div className="mt-2 text-xs uppercase tracking-[0.15em] text-muted-foreground">{s.l}</div>
             </div>
           ))}
