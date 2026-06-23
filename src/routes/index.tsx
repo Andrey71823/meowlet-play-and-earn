@@ -659,6 +659,7 @@ function Footer() {
 function Index() {
   return (
     <main className="relative min-h-screen overflow-x-clip text-cream">
+      <WaveDecor />
       <Header />
       <Hero />
       <Stats />
@@ -669,5 +670,43 @@ function Index() {
       <FinalCTA />
       <Footer />
     </main>
+  );
+}
+
+function WaveDecor() {
+  return (
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <svg className="absolute -top-10 left-0 w-[140%] opacity-40" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="w1" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stopColor="oklch(0.78 0.15 220)" />
+            <stop offset="0.5" stopColor="oklch(0.55 0.25 300)" />
+            <stop offset="1" stopColor="oklch(0.65 0.27 350)" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#w1)" fillOpacity="0.35" d="M0,160 C240,260 480,60 720,140 C960,220 1200,80 1440,160 L1440,320 L0,320 Z" />
+      </svg>
+      <svg className="absolute top-[55%] -left-10 w-[140%] opacity-50" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="w2" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stopColor="oklch(0.65 0.27 350)" />
+            <stop offset="0.5" stopColor="oklch(0.78 0.22 40)" />
+            <stop offset="1" stopColor="oklch(0.55 0.25 300)" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#w2)" fillOpacity="0.3" d="M0,200 C360,80 720,260 1080,160 C1260,110 1380,180 1440,200 L1440,320 L0,320 Z" />
+      </svg>
+      <svg className="absolute bottom-[-40px] left-0 w-[140%] opacity-50" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="w3" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stopColor="oklch(0.78 0.22 40)" />
+            <stop offset="1" stopColor="oklch(0.65 0.27 350)" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#w3)" fillOpacity="0.35" d="M0,180 C300,300 600,60 960,160 C1200,230 1320,140 1440,180 L1440,320 L0,320 Z" />
+      </svg>
+      {/* stars */}
+      <div className="absolute inset-0 bg-[radial-gradient(oklch(1_0_0/0.4)_1px,transparent_1px)] [background-size:120px_120px] opacity-20" />
+    </div>
   );
 }
