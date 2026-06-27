@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import meowletHtml from "../assets/meowlet-landing.html?raw";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -26,7 +24,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <iframe
-      srcDoc={meowletHtml}
+      src="/meowlet/index.html"
       title="Meowlet"
       style={{
         position: "fixed",
